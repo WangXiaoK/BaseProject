@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>GordonShop</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+
+	</head>
+
+	<script>
+		$(function() {
+			$(".body-part").css("border", "1px solid green");
+		});
+	</script>
+
+	<body>
+		<div class="container">
+			<div id="head" class="body-part">
+				<div class="modal fade" id="head-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+								<h4 class="modal-title" id="myModalLabel">
+					模态框（Modal）标题
+				</h4>
+							</div>
+							<div class="modal-body">
+								在这里添加一些文本
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+								<button type="button" class="btn btn-primary">
+					提交更改
+				</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="head-info">
+					<ul class="nav nav-pills nav-justified">
+						<li class="active">
+							<img src="img/book_logo.jpg" class="img-rounded" style="font-size: small;">
+						</li>
+						<li>
+							<a href="#" style="font-size:100%;" data-toggle="modal" data-target="#head-model">请登录</a>
+						</li>
+						<li>
+							<a href="#" style="font-size:100%;">图书</a>
+						</li>
+						<li>
+							<a href="#" style="font-size:100%;">我的主页</a>
+						</li>
+						<li>
+							<a href="#" style="font-size:100%;">购物车</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="body" class="body-part">
+
+			</div>
+			<div id="foot" class="body-part"></div>
+		</div>
+	</body>
+
+</html>
