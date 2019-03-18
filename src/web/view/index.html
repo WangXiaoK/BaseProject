@@ -5,70 +5,164 @@
 		<title>GordonShop</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css" />
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		
+		<link rel="stylesheet" href="public/bootstrap-3.3.7-dist/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="public/css/styles.css">
+		<link href="public/css/libiao.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="public/js/jquery-1.12.1.min.js"></script>
+		<script type="text/javascript" src="public/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		
+		<script>
+		
+	</script>
 
 	</head>
 
 	<script>
 		$(function() {
-			$(".body-part").css("border", "1px solid green");
+			$(".box ul li").hover(function(){
+				$(this).addClass('on').siblings().removeClass('on');
+			});
 		});
 	</script>
 
 	<body>
 		<div class="container">
-			<div id="head" class="body-part">
-				<div class="modal fade" id="head-model" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-					&times;
-				</button>
-								<h4 class="modal-title" id="myModalLabel">
-					模态框（Modal）标题
-				</h4>
-							</div>
-							<div class="modal-body">
-								在这里添加一些文本
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">关闭
-				</button>
-								<button type="button" class="btn btn-primary">
-					提交更改
-				</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="head-info">
+
+				<div id="head-info" style="border: 1px solid green;">
 					<ul class="nav nav-pills nav-justified">
 						<li class="active">
-							<img src="img/book_logo.jpg" class="img-rounded" style="font-size: small;">
+							<img src="public/img/book_logo.jpg" class="img-rounded" style="font-size: small;">
 						</li>
 						<li>
-							<a href="#" style="font-size:100%;" data-toggle="modal" data-target="#head-model">请登录</a>
+							<a href="#" style="font-size:100%;" data-toggle="modal" data-target="#login-info">请登录</a>
 						</li>
 						<li>
 							<a href="#" style="font-size:100%;">图书</a>
 						</li>
 						<li>
-							<a href="#" style="font-size:100%;">我的主页</a>
+							<a href="#" style="font-size:100%;" id="index_page">我的主页</a>
 						</li>
 						<li>
 							<a href="#" style="font-size:100%;">购物车</a>
 						</li>
 					</ul>
 				</div>
+				
+			<div id="body" class="body-part" style="border: 1px solid green;" >
+				<section class="main_box">
+					<div class="box" >
+						<ul>
+							<li class="on">
+								<a href="#">
+									<h3>游戏手机</h3>
+									<p>王者荣耀版领卷减300</p>
+									<img src="public/images/1.png" alt="img">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<h3>游戏手机</h3>
+									<p>王者荣耀版领卷减300</p>
+									<img src="public/images/2.png" alt="img">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<h3>游戏手机</h3>
+									<p>王者荣耀版领卷减300</p>
+									<img src="public/images/3.png" alt="img">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<h3>游戏手机</h3>
+									<p>王者荣耀版领卷减300</p>
+									<img src="public/images/4.png" alt="img">
+								</a>
+							</li>
+							<div style="clear: both"></div>
+						</ul>
+					</div>
+				</section>
 			</div>
-			<div id="body" class="body-part">
-
-			</div>
+			
 			<div id="foot" class="body-part"></div>
+			
+			<!--
+            	作者：2745354218@qq.com
+            	时间：2019-03-18
+            	描述：登录模态框
+            -->
+			<div class="modal fade" id="login-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		    		<div class="jq22-container" style="padding-top:100px">
+						<div class="login-wrap">
+							<div class="login-html">
+								<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+								<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+								<div class="login-form">
+									<div class="sign-in-htm">
+										<form action="#">
+											<div class="group">
+												<label for="user" class="label">Username</label>
+												<input id="user" type="text" class="input">
+											</div>
+											<div class="group">
+												<label for="pass" class="label">Password</label>
+												<input id="pass" type="password" class="input" data-type="password">
+											</div>
+											<div class="group">
+												<input id="check" type="checkbox" class="check" checked>
+												<label for="check"><span class="icon"></span> Keep me Signed in</label>
+											</div>
+											<div class="group">
+												<input type="submit" class="button" value="Sign In" data-dismiss="modal">
+											</div>
+											<div class="hr"></div>
+											<div class="foot-lnk">
+												<a href="#forgot">Forgot Password?</a>
+											</div>
+										</form>
+										</div>
+									<div class="sign-up-htm">
+										<form action="#">
+											<div class="group">
+												<label for="user" class="label">Username</label>
+												<input id="register_user" type="text" class="input">
+											</div>
+											<div class="group">
+												<label for="pass" class="label">Password</label>
+												<input id="register_pass" type="password" class="input" data-type="password">
+											</div>
+											<div class="group">
+												<label for="pass" class="label">Repeat Password</label>
+												<input id="check_pass" type="password" class="input" data-type="password">
+											</div>
+											<div class="group">
+												<label for="pass" class="label">Email Address</label>
+												<input id="email" type="text" class="input">
+											</div>
+											<div class="group">
+												<input type="submit" class="button" value="Sign Up" data-dismiss="modal">
+											</div>
+											<div class="hr"></div>
+											<div class="foot-lnk">
+												<label for="tab-1">Already Member?</a>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!--/.jq22-container-->
+		    </div><!-- /.modal-dialog -->
 		</div>
+			<!-- /.modal -->
+		
+		
+		
+		
+		
 	</body>
-
 </html>
