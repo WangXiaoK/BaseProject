@@ -23,6 +23,32 @@
 			$(".box ul li").hover(function(){
 				$(this).addClass('on').siblings().removeClass('on');
 			});
+			// 初始化轮播
+			$(".start-slide").click(function(){
+				$("#myCarousel").carousel('cycle');
+			});
+			// 停止轮播
+			$(".pause-slide").click(function(){
+				$("#myCarousel").carousel('pause');
+			});
+			// 循环轮播到上一个项目
+			$(".prev-slide").click(function(){
+				$("#myCarousel").carousel('prev');
+			});
+			// 循环轮播到下一个项目
+			$(".next-slide").click(function(){
+				$("#myCarousel").carousel('next');
+			});
+			// 循环轮播到某个特定的帧 
+			$(".slide-one").click(function(){
+				$("#myCarousel").carousel(0);
+			});
+			$(".slide-two").click(function(){
+				$("#myCarousel").carousel(1);
+			});
+			$(".slide-three").click(function(){
+				$("#myCarousel").carousel(2);
+			});
 		});
 	</script>
 
@@ -50,34 +76,84 @@
 				</div>
 				
 			<div id="body" class="body-part" style="border: 1px solid green;" >
-				<section class="main_box">
-					<div class="box" >
+				<!--
+                	作者：2745354218@qq.com
+                	时间：2019-03-19
+                	描述：轮播框
+                -->
+				<div id="myCarousel" class="carousel slide">
+					<!-- 轮播（Carousel）指标 -->
+					<ol class="carousel-indicators">
+						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+					</ol>   
+				
+					<!-- 轮播（Carousel）项目 -->
+					<div class="carousel-inner">
+						<div class="item active">
+						<img src="public/images/1.png" alt="First slide">
+						</div>
+						<div class="item">
+						<img src="public/images/2.png" alt="Second slide">
+						</div>
+						<div class="item">
+						<img src="public/images/4.png" alt="Third slide">
+						</div>
+					</div>
+					<!-- 轮播（Carousel）导航 -->
+					<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					</a>
+				</div>
+				<!-- 控制按钮 -->
+				<div style="text-align:center;">
+					<input type="button" class="btn start-slide" value="Start">
+					<input type="button" class="btn pause-slide" value="Pause">
+					<input type="button" class="btn prev-slide" value="Previous Slide">
+					<input type="button" class="btn next-slide" value="Next Slide">
+					<input type="button" class="btn slide-one" value="Slide 1">
+					<input type="button" class="btn slide-two" value="Slide 2">
+					<input type="button" class="btn slide-three" value="Slide 3">
+				</div>
+				<!--
+                	作者：2745354218@qq.com
+                	时间：2019-03-19
+                	描述：分区栏
+                -->
+				<section class="main_box" style="margin-left:50px;">
+					<div class="box">
 						<ul>
 							<li class="on">
 								<a href="#">
-									<h3>游戏手机</h3>
-									<p>王者荣耀版领卷减300</p>
+									<h3>新品上市</h3>
+									<p>你还在犹豫什么</p>
 									<img src="public/images/1.png" alt="img">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<h3>游戏手机</h3>
-									<p>王者荣耀版领卷减300</p>
+									<h3>特价区</h3>
+									<p>7.5折</p>
 									<img src="public/images/2.png" alt="img">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<h3>游戏手机</h3>
-									<p>王者荣耀版领卷减300</p>
+									<h3>遨游课外</h3>
+									<p>想看一下社会的风情吗？</p>
 									<img src="public/images/3.png" alt="img">
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									<h3>游戏手机</h3>
-									<p>王者荣耀版领卷减300</p>
+									<h3>风骚学林</h3>
+									<p>看看有你的偶像吗？</p>
 									<img src="public/images/4.png" alt="img">
 								</a>
 							</li>
@@ -85,8 +161,20 @@
 						</ul>
 					</div>
 				</section>
-				<div>
-					
+				<!--
+                	作者：2745354218@qq.com
+                	时间：2019-03-19
+                	描述：宣传视频
+                -->
+				<div >
+					<div class="row">
+						<div class="span6">
+							<h4>宣传视频</h4>
+						</div>
+						<div class="span6">
+							<h4>宣传视频</h4>
+						</div>
+					</div>
 				</div>
 			</div>
 			
