@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html class="no-js LANG-cn" lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+
+<title>jQuery右侧悬浮购物车清单代码 - 站长素材</title>
+
+<!--<link rel="stylesheet" href="public/css/base.css">-->
+<link rel="stylesheet" href="public/css/home.css">
+
+</head>
+<body>
+
+<div class="global_toolbar">
+	<div class="toolbar_btn center" style="top: 50%; margin-top: -150px;">
+		<a href="#" id="needtohelp_0_GetPricing" class="bar_forum bar_project_consulting">
+			<samp>
+				<i class="iconi icon-LiveChat1">
+					<img src="public/img/icon/car-0.png" alt="">
+				</i>
+			</samp>
+			<em>
+				<i>项目咨询</i>
+			</em>
+		</a>
+		<a id="needtohelp_0_shoppingCart" class="bar_cart " data-id="global_toolbar">
+			<samp>
+				<i class="iconi icon-LiveChat1">
+					<img src="public/img/icon/car-1.png" alt="">
+				</i>
+			</samp>
+			<em>
+				<i>购物车</i>
+			</em>
+			<span id="lmliCount" style="display: block;">5</span>
+		</a>
+		<a href="#" id="needtohelp_0_forum" class="bar_forum">
+			<samp>
+				<i class="iconi icon-LiveChat1">
+					<img src="public/img/icon/car-2.png" alt="">
+				</i>
+			</samp>
+			<em>
+				<i>查找经销商</i>
+			</em>
+		</a>
+		<a href="#" id="needtohelp_0_GetQuote" class="bar_forum bar_inquire">
+			<samp>
+				<i class="iconi icon-LiveChat1">
+					<img src="public/img/icon/car-3.png" alt="">
+				</i>
+			</samp>
+			<em>
+				<i>售前咨询</i>
+			</em>
+		</a>
+		<a href="#" id="needtohelp_0_contactus" class="bar_contact bar_forum" data-id="contact_column">
+			<samp>
+				<i class="iconi icon-LiveChat1">
+					<img src="public/img/icon/car-4.png" alt="">
+				</i>
+			</samp>
+			<em>
+				<i>更多联系方式</i>
+			</em>
+		</a>
+	</div>
+	<div class="toolbar_content">
+		<div class="css_column cart_column js_column" id="shop_cart">
+			<h4>
+				购物车<a href="javascript:void(0)" class="icon-close " >X</a>
+			</h4>
+			<div id="resultData">
+				<ul style="height: auto;">
+					<li class="clearfix" data-url="7002728">
+						<input type="checkbox" class="checkbox_c " name="checkbox_c_Name" data-url="" checked="checked">
+						<span class="check"></span>
+						<div class="img_con">
+							<img src="public/img/pd/pd1.jpg" alt="">
+						</div>
+						<div class="product_name">
+							<span title="CE12808">CE12808</span>
+							<a href="javascript:void(0)" class="del_pro_btn" onClick="">删除</a>
+						</div>
+						<div class="amount_btn clearfix">
+							<input type="text" value="1" class="spinnerExample" onBlur="isDigit(this)">
+						</div>
+					</li>
+					<li class="clearfix" data-url="7002720">
+						<input type="checkbox" class="checkbox_c" name="checkbox_c_Name" data-url="7002720|" checked="checked">
+						<span class="check"></span>
+						<div class="img_con">
+							<img src="public/img/pd/pd2.jpg" alt="">
+						</div>
+						<div class="product_name">
+							<span title="CE12804">CE12804</span>
+							<a href="javascript:void(0)" class="del_pro_btn" onClick="">删除</a>
+						</div>
+						<div class="amount_btn clearfix">
+							<input type="text" value="9" class="spinnerExample" onBlur="isDigit(this)">
+						</div>
+					</li>
+					<li class="clearfix" data-url="7097193">
+						<input type="checkbox" class="checkbox_c" name="checkbox_c_Name" data-url="7097193|" checked="checked">
+						<span class="check"></span>
+						<div class="img_con">
+							<img src="public/img/pd/pd2.jpg" alt="">
+						</div>
+						<div class="product_name">
+							<span title="AR1220EV">AR1220EV</span>
+							<a href="javascript:void(0)" class="del_pro_btn" onClick="">删除</a>
+						</div>
+						<div class="amount_btn clearfix">
+							<input type="text" value="1" class="spinnerExample" onBlur="isDigit(this)">
+						</div>
+					</li>
+					<li class="clearfix" data-url="7115213">
+						<input type="checkbox" class="checkbox_c" name="checkbox_c_Name" data-url="7115213|" checked="checked">
+						<span class="check"></span>
+						<div class="img_con">
+							<img src="public/img/pd/pd1.jpg" alt="">
+						</div>
+						<div class="product_name">
+							<span title="S5700-28P-PWR-LI-AC">S5700-28...</span>
+							<a href="javascript:void(0)" class="del_pro_btn" onClick="">删除</a>
+						</div>
+						<div class="amount_btn clearfix">
+							<input type="text" value="1" class="spinnerExample" onBlur="isDigit(this)">
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="count_info clearfix">
+				<label>
+					<input type="checkbox" class="select_all" checked="checkbox">
+					<span class="check"></span>
+					<span class="text">全选</span>
+				</label>
+				<p>
+					共计： <span>12</span>
+					个产品
+				</p>
+			</div>
+			<div class="more shop-more clearfix">
+				<a href="#" target="">购买更多产品</a>
+			</div>
+			<div class="shop_function_btn clearfix">
+				<a href="#" class="more redbtn-moddle1" id="btn_popup_login">
+					<span>登录</span>
+				</a>
+				<a href="#" class="go_btn more redbtn-moddle1">
+					<span>寻求报价</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 登录弹窗 默认隐藏 begin -->
+<div style="display: none;" class="popup_login">
+	<div class="login_form">
+		<a class="close_popup" href="javascript:void(0)">
+			<img src="public/img/icon/icon-clo.png" alt="">
+		</a>
+		<h3>登录</h3>
+		<div>
+			<div class="form_block">
+						<span class="username_icon input_icon">
+							<img src="public/img/icon/user.png" alt="">
+						</span>
+				<input type="text" placeholder="帐号/邮箱" maxlength="52" name="userNamepopup" id="userNamepopup">
+			</div>
+			<div class="form_block">
+						<span class="password_icon input_icon">
+							<img src="public/img/icon/password.png" alt="">
+						</span>
+				<input type="password" placeholder="密码" maxlength="52" name="pwdpopup" id="pwdpopup">
+			</div>
+			<div class="tips_error"></div>
+			<input type="button" class="form_login_btn" id="btnLoginpopup" value="登录">
+		</div>
+		<div class="login_else_info clearfix">
+					<span>
+						<a href="#">忘记密码</a>
+						<label>|</label>
+						<a href="#">修改密码</a>
+					</span>
+			<div class="need_reg">
+				没有帐号？<a href="#">立即创建一个</a>
+			</div>
+		</div>
+		<div class="other-sign-in-methods"></div>
+	</div>
+	<input type="hidden" value="用户名不能为空" id="userNamepopupErrMsg">
+	<input type="hidden" value="密码不能为空" id="passwordpopupErrMsg">
+</div>
+<!-- 登录弹窗 默认隐藏 end -->
+<script type="text/javascript" src="public/js/jquery-1.12.1.min.js"></script>
+<script type="text/javascript" src="public/js/common.js"></script>
+
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>
